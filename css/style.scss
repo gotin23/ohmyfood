@@ -1,13 +1,14 @@
 $Purple:  #9356DC;
 $Dark-blue:#003A68;
 $Lite-blue:#89C8FA;
-$Dark-green: #008766;;
+$Dark-green: #008766;
 $Lite-green:#99E2D0;
-$Lite-grn: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+
 
 @mixin flex-center {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 @mixin box-shadow {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -21,6 +22,10 @@ $Lite-grn: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 @mixin gradient-purple {
     background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
+@mixin gradient-purple-hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+
+} 
 
 @font-face {
     font-family: "Roboto";
@@ -40,12 +45,66 @@ $Lite-grn: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   .all-content{
     width: 100%;
   }
+//   Navigation-bar
+  header {
+
   nav{
     width:100%;
     text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
    
    img{
-    width: 162px;
-    padding: 14px;
+      width: 162px;
+      padding: 14px;
    }
   }
+
+    .localisation{
+    @include flex-center; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 16px;
+    text-align: center;
+    background: #EAEAEA;
+    img{
+        width: 12px;
+        margin-right: 17px;
+    }
+    }
+    section{
+      background: #F7F7F7;
+      text-align: center;
+      padding: 25px;
+      h1{
+        text-align: center;
+        font-weight: 700;
+        
+        font-size: 24px;
+        line-height: 28px;
+      }
+      p{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+      }
+      button{
+        @include gradient-purple;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #f1f1f1;
+        border-radius: 25px;
+        border: none;
+        padding: 13px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        cursor: pointer; 
+      }
+      button:hover{
+        @include gradient-purple-hover;
+      }
+    }
+  }
+  
