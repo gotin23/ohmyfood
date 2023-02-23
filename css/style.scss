@@ -185,7 +185,114 @@ $Lite-green:#99E2D0;
         display: none;
       }
     }
-   
     
+    .restaurants-section{
+      background:#F7F7F7;
+      margin-top: 50px;
+      h2{
+        padding-top: 54px;
+        
+        margin-bottom: 26px;
+        margin-left: 20px;
+      }
+      .restaurants-container{
+        width: 100%;
+        @include flex-center;
+        flex-direction: column;
+     
+        
+        
+      }
+      .restaurant-card{
+        width: 90%;
+        max-height: 261px;
+        @include box-shadow;
+        border-radius: 15px;
+        background: #ffffff;
+        position: relative;
+        margin-bottom:18px ;
+
+        a{
+          text-decoration: none;
+          color:  #000000 ;
+        }
+        h3{
+          font-weight: 700;
+          font-size: 18px;
+         line-height: 21px;
+         margin-top: 16px;
+         margin-left: 13px;
+         margin-bottom: 5px;
+        }
+        p{
+          font-weight: 300;
+          font-size: 17px;
+          line-height: 20px;
+          margin-left: 13px;
+          margin-bottom: 25px;
+        }
+        .restaurant-pic{
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+          border-radius: 15px 15px 0 0 ;
+        }
+        .container-heart{
+          position: absolute;
+          right: 15px;
+          bottom: 35px;
+          width: 21px;
+          height: 21px;
+          z-index: 100;
+        }
+        .logo-heart-strokes{
+          width: 21px;
+          cursor: pointer;
+        }
+       
+         .logo-heart-fill{
+          cursor: pointer;
+         width: 21px;
+          display: none;
+          
+        }
+        .container-heart:hover .logo-heart-fill{
+          
+          display: block;
+        }
+        .container-heart:hover .logo-heart-strokes{
+          display: none;
+        }
+       
+      }
+      
+ 
+    }
+  }
+  footer{
+    background: #353535;
+    padding: 22px 25px ;
+    .ohmyfood-logo-footer{
+      margin-bottom: 16px;
+      width: 110px;
+    }
+    ul{
+      list-style-type: none;
+      li{
+        margin-bottom: 7px;
+      
+        img{
+          width:13px ;
+          margin-right: 9px;
+        }
+      }
+    }
+    a{
+     text-decoration: none;
+     color:#ffffff ;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 19px;
+    }
   }
   
