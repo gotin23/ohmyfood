@@ -1,5 +1,5 @@
-$Purple:  #9356DC;
-$Dark-blue:#003A68;
+$Primary:  #9356DC;
+$Secondary:#003A68;
 $Lite-blue:#89C8FA;
 $Dark-green: #008766;
 $Lite-green:#99E2D0;
@@ -27,10 +27,10 @@ $Lite-green:#99E2D0;
 
 } 
 
-@font-face {
-    font-family: "Roboto";
-    src: url('/font/Roboto-Regular.ttf');
-  }
+// @font-face {
+//     font-family: "Roboto";
+//     src: url('/font/Roboto-Regular.ttf');
+//   }
 
 *,::after,::before{
     padding: 0;
@@ -106,5 +106,86 @@ $Lite-green:#99E2D0;
         @include gradient-purple-hover;
       }
     }
+  }
+
+  main{
+    .operation{
+      width: 100%;
+      h2{
+        margin-top: 48px;
+        margin-bottom:26px;
+        padding-left: 20px 
+      }
+      .container-button-operation{
+        @include flex-center;
+        flex-direction: column;
+      
+        
+       
+        button{
+          @include flex-center;
+          justify-content: flex-start;
+          position: relative;
+          margin-bottom: 25px;
+          background: #F7F7F7;
+          border-radius: 20px;
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          border: none;
+          padding: 28px;
+          width: 80%;
+          
+          cursor: pointer;
+          
+          img{
+            margin-right: 27px;            
+            
+          }
+          
+          div{
+            @include flex-center;
+            position: absolute;
+            left: -12px;
+            background:$Primary ;
+            font-weight: 500;
+            font-size: 14.1818px;
+            line-height: 17px;
+            color: #ffffff;
+            width:24px ;
+            height: 24px;
+            border-radius: 50%;
+
+          }
+        }
+       
+        button:hover .color-logo-operation{
+          display: block;
+        
+       }
+       button:hover .grey-logo-operation{
+          display: none;
+       }
+       button:hover{
+        transition: 0.4s;
+        background: #F5EDFF;
+       }                        
+      }
+      .mobile{
+        width: 13px;
+      }
+      .store{
+        width: 18px;
+      }
+      .list-ul{
+        width:16px;
+      }
+      .color-logo-operation{
+        display: none;
+      }
+    }
+   
+    
   }
   
