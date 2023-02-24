@@ -16,12 +16,15 @@ body {
 
 header nav {
   width: 100%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 header nav img {
-  width: 162px;
-  padding: 14px;
+  width: 182px;
+  padding: 18px;
 }
 header .localisation {
   display: flex;
@@ -66,6 +69,7 @@ header section button {
   margin-top: 30px;
   margin-bottom: 40px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: 0.4s;
   cursor: pointer;
 }
 header section button:hover {
@@ -169,6 +173,14 @@ main .restaurants-section .restaurant-card {
   position: relative;
   margin-bottom: 18px;
 }
+main .restaurants-section .restaurant-card .new-restaurant {
+  background: #99E2D0;
+  color: #008766;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 6px;
+}
 main .restaurants-section .restaurant-card a {
   text-decoration: none;
   color: #000000;
@@ -198,7 +210,7 @@ main .restaurants-section .restaurant-card .restaurant-pic {
 main .restaurants-section .restaurant-card .container-heart {
   position: absolute;
   right: 15px;
-  bottom: 35px;
+  bottom: 40px;
   width: 21px;
   height: 21px;
   z-index: 100;
@@ -211,6 +223,7 @@ main .restaurants-section .restaurant-card .logo-heart-fill {
   cursor: pointer;
   width: 21px;
   display: none;
+  animation: flip 0.4s ease-in-out;
 }
 main .restaurants-section .restaurant-card .container-heart:hover .logo-heart-fill {
   display: block;
@@ -243,4 +256,194 @@ footer a {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+}
+
+header .arrow-nav {
+  position: absolute;
+  width: 45px;
+  left: 0;
+  top: 0px;
+  margin: 0;
+  cursor: pointer;
+}
+header .banner {
+  width: 100%;
+}
+header .banner img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 270px;
+}
+
+main {
+  position: relative;
+}
+main h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 41px;
+  margin-top: 19px;
+}
+main .menu-container {
+  position: absolute;
+  background: #F7F7F7;
+  width: 100%;
+  height: 400px;
+  border-radius: 40px;
+  top: -55px;
+  padding: 13px;
+}
+main .menu-container .menu-starter:hover .green-bar {
+  width: 85px;
+}
+main .menu-container .container-heart {
+  position: absolute;
+  top: 42px;
+  right: 40px;
+}
+main .menu-container .container-heart img {
+  width: 23px;
+}
+main .menu-container .container-heart .logo-heart-fill {
+  display: none;
+  animation: flip 0.4s ease-in-out;
+}
+main .menu-container .container-heart:hover .logo-heart-strokes {
+  display: none;
+}
+main .menu-container .container-heart:hover .logo-heart-fill {
+  display: block;
+}
+main .menu-container h2 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  margin-top: 40px;
+}
+main .menu-container .green-bar {
+  height: 3px;
+  width: 40px;
+  transition: width 0.4s ease-in-out;
+  background-color: #99E2D0;
+}
+main .menu-container .card-menu {
+  width: 100%;
+  height: 69px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  margin-top: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+main .menu-container .card-menu .info-menu {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  margin-right: 15px;
+  padding: 12px;
+  position: relative;
+}
+main .menu-container .card-menu .info-menu h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+main .menu-container .card-menu .info-menu h4 {
+  position: absolute;
+  right: 0px;
+  bottom: 15px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+}
+main .menu-container .card-menu .info-menu p {
+  font-weight: 300;
+  max-width: 260px;
+  font-size: 15px;
+  line-height: 23px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: max-width 0.4s ease-in-out;
+}
+main .menu-container .card-menu .animation-check {
+  height: 100%;
+  width: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  transition: width 0.4s ease-in-out;
+}
+main .menu-container .card-menu .animation-check .container-check-logo {
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: rotationIn 0.4s linear;
+}
+main .menu-container .card-menu .animation-check .container-check-logo img {
+  width: 0px;
+  transition: width 0.4s ease-in;
+}
+main .menu-container .card-menu:hover .animation-check {
+  width: 25%;
+}
+main .menu-container .card-menu:hover .animation-check img {
+  width: 20px;
+}
+main .menu-container .card-menu:hover .container-check-logo {
+  animation: rotationOut 0.4s linear;
+}
+main .menu-container .card-menu:hover p {
+  max-width: 220px;
+}
+
+@keyframes rotationOut {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes rotationIn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes flip {
+  0% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: perspective(400px);
+    animation-timing-function: ease-in;
+  }
 }/*# sourceMappingURL=style.css.map */
