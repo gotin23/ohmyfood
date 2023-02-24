@@ -439,14 +439,21 @@ $Lite-green:#99E2D0;
           font-weight: 500;
           font-size: 18px;
           line-height: 21px;
+          max-width: 270px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          transition: max-width 0.4s ease-in-out;
         }
         h4{
           position: absolute;
           right:0px ;
           bottom:15px;
+         
           font-weight: 700;
           font-size: 15px;
           line-height: 18px;
+         
           
         }
         p{
@@ -493,6 +500,10 @@ $Lite-green:#99E2D0;
       animation:rotationOut 0.4s linear ;
     }
     .card-menu:hover  p{
+      max-width: 220px;
+    
+    }
+    .card-menu:hover  h3{
       max-width: 220px;
     
     }

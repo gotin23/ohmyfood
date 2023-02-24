@@ -362,6 +362,11 @@ main .menu-container .card-menu .info-menu h3 {
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
+  max-width: 270px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: max-width 0.4s ease-in-out;
 }
 main .menu-container .card-menu .info-menu h4 {
   position: absolute;
@@ -416,6 +421,9 @@ main .menu-container .card-menu:hover .container-check-logo {
   animation: rotationOut 0.4s linear;
 }
 main .menu-container .card-menu:hover p {
+  max-width: 220px;
+}
+main .menu-container .card-menu:hover h3 {
   max-width: 220px;
 }
 main .menu-container .container-btn-order {
