@@ -23,8 +23,8 @@ header nav {
   position: relative;
 }
 header nav img {
-  width: 182px;
-  padding: 18px;
+  width: 192px;
+  padding: 16px;
 }
 header .localisation {
   display: flex;
@@ -46,11 +46,19 @@ header section {
   text-align: center;
   padding: 25px;
 }
-header section h1 {
+header section .title-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header section .title-container h1 {
   text-align: center;
+  width: 70%;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  padding-bottom: 10px;
 }
 header section p {
   font-weight: 300;
@@ -65,7 +73,7 @@ header section button {
   color: #f1f1f1;
   border-radius: 25px;
   border: none;
-  padding: 13px;
+  padding: 15px 19px;
   margin-top: 30px;
   margin-bottom: 40px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -78,6 +86,7 @@ header section button:hover {
 
 main .operation {
   width: 100%;
+  background: #ffffff;
 }
 main .operation h2 {
   margin-top: 48px;
@@ -126,6 +135,9 @@ main .operation .container-button-operation button div {
   height: 24px;
   border-radius: 50%;
 }
+main .operation .container-button-operation .last-btn-operation {
+  margin-bottom: 70px;
+}
 main .operation .container-button-operation button:hover .color-logo-operation {
   display: block;
 }
@@ -150,7 +162,6 @@ main .operation .color-logo-operation {
 }
 main .restaurants-section {
   background: #F7F7F7;
-  margin-top: 50px;
 }
 main .restaurants-section h2 {
   padding-top: 54px;
@@ -163,6 +174,9 @@ main .restaurants-section .restaurants-container {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+main .restaurants-section .restaurants-container :nth-child(4) {
+  margin-bottom: 64px;
 }
 main .restaurants-section .restaurant-card {
   width: 90%;
@@ -179,7 +193,7 @@ main .restaurants-section .restaurant-card .new-restaurant {
   position: absolute;
   right: 15px;
   top: 15px;
-  padding: 6px;
+  padding: 6px 12px;
 }
 main .restaurants-section .restaurant-card a {
   text-decoration: none;
@@ -250,6 +264,9 @@ footer ul li img {
   width: 13px;
   margin-right: 9px;
 }
+footer ul :nth-child(2) img {
+  width: 14px;
+}
 footer a {
   text-decoration: none;
   color: #ffffff;
@@ -284,7 +301,6 @@ main {
 main .container-backgroung-top {
   height: 40px;
   width: 100%;
-  background-color: #003A68;
   position: absolute;
   top: -40px;
   background: #F7F7F7;
@@ -451,6 +467,45 @@ main .menu-container .container-btn-order button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
+@media screen and (min-width: 992px) {
+  main .operation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  main .operation h2 {
+    width: 75%;
+  }
+  main .operation .container-button-operation {
+    flex-direction: row;
+    width: 70%;
+  }
+  main .operation .container-button-operation button {
+    width: 33%;
+    margin-right: 36px;
+    padding: 25px;
+    margin-bottom: 80px;
+  }
+  main .restaurants-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  main .restaurants-section h2 {
+    width: 75%;
+  }
+  main .restaurants-section .restaurants-container {
+    flex-direction: row;
+    width: 90%;
+  }
+  main .restaurants-section .restaurants-container .restaurant-card {
+    flex: 30%;
+    margin-right: 15px;
+    margin-bottom: 50px;
+  }
+}
 @keyframes rotationOut {
   from {
     transform: rotate(0deg);
