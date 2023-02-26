@@ -42,6 +42,7 @@ $Lite-green:#99E2D0;
     min-width: 100vw;
     font-family:'Roboto' ;
   }
+ 
   .all-content{
     width: 100%;
   }
@@ -53,6 +54,7 @@ $Lite-green:#99E2D0;
     @include flex-center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     position: relative;
+    background-color: #f1f1f1;
    
    img{
       width: 192px;
@@ -114,6 +116,7 @@ $Lite-green:#99E2D0;
       }
       button:hover{
      @include gradient-purple-hover;
+     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
       }
     }
   }
@@ -123,7 +126,7 @@ $Lite-green:#99E2D0;
       width: 100%;
       background: #ffffff;
       h2{
-        margin-top: 48px;
+        padding-top: 48px;
         margin-bottom:26px;
         padding-left: 20px 
       }
@@ -319,6 +322,9 @@ $Lite-green:#99E2D0;
           margin-right: 9px;
         }
       }
+      .footer-li-smaller{
+        font-weight: 400;
+      }
     }
     ul :nth-child(2) img {
       width: 14px;
@@ -331,17 +337,7 @@ $Lite-green:#99E2D0;
      line-height: 19px;
     }
   }
-  // @keyframes fondu {
-  //   from { 
-  //     opacity: 0;
-  //     transform: scaleX(0) 
-  //   }
-  //   to   { 
-  //     opacity: 1;
-  //     transform: scaleX(1) 
-  //   }
-  // }
-
+ 
 
 
 
@@ -396,13 +392,16 @@ $Lite-green:#99E2D0;
     border-radius: 40px 40px 0px 0px;
     // top:-55px;
     padding: 0px 13px;
+    .container-title-restaurant{
+      position: relative;
+    }
     .menu:hover .green-bar{
       width:85px
      }
      .container-heart{
       position: absolute;
       top:10px;
-      right: 40px;
+      right: 30px;
       img{
         width:23px;
       }
@@ -464,12 +463,10 @@ $Lite-green:#99E2D0;
           position: absolute;
           right:0px ;
           bottom:15px;
-         
+
           font-weight: 700;
           font-size: 15px;
-          line-height: 18px;
-         
-          
+          line-height: 18px;   
         }
         p{
           font-weight: 300;
@@ -516,11 +513,9 @@ $Lite-green:#99E2D0;
     }
     .card-menu:hover  p{
       max-width: 220px;
-    
     }
     .card-menu:hover  h3{
       max-width: 220px;
-    
     }
     .container-btn-order{
       width: 100%;
@@ -542,6 +537,7 @@ $Lite-green:#99E2D0;
       }
       button:hover{
           @include gradient-purple-hover();
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 
       }
     }
@@ -551,38 +547,42 @@ $Lite-green:#99E2D0;
 
 
 
- @media screen and (min-width: 992px) {
+ @media screen and (min-width: 1280px) {
    main{
     .operation{
+     
+      
       h2{
-        width: 75%
+        width: 60%;
+       
+        
       }
       @include flex-center;
       flex-wrap: wrap;
       .container-button-operation{
         flex-direction: row;
-        width: 70%;
+        
+       
+        width: 60%;
         button{
-          width: 33%;
+           max-width: 322px;
+           max-height: 72px;
           margin-right: 36px;
           padding: 25px;
-          margin-bottom: 80px;
-      
-         
-        }
-        
+          margin-bottom: 80px;        
+        }      
       }
     }
     .restaurants-section{
       h2{
-        width:75%;
+        width:60%;
 
       }
       @include flex-center();
       flex-wrap: wrap;
       .restaurants-container{
         flex-direction: row;
-        width: 90%;
+        width: 60%;
         .restaurant-card{
        flex: 30%;
        margin-right: 15px;
@@ -591,8 +591,69 @@ $Lite-green:#99E2D0;
       }
     }
    }
+   footer{
+    @include flex-center();
+    flex-direction: row-reverse;
+    .ohmyfood-logo-footer{
+      width: 131px;
+      margin-left: 31px;
+      margin-bottom: 3px;
+    }
+    ul{
+      @include flex-center();
+      li{
+        margin-right: 40px;
+      }
+      
+    }
+   
+   }
   
-    
+  main{
+    .all-menu-container{
+      @include flex-center();
+      width: 100%;
+        background-color: #ffffff;
+    }
+
+   
+    .container-backgroung-top{
+      width: 70%;
+     
+    }
+    .menu-container{
+      width: 70%;
+      border-radius: 0px;
+      @include flex-center();
+      flex-direction: column;
+      .container-title-restaurant{
+       .container-heart{
+        right: -40px;
+       }
+      }
+      .menu{
+        width: 70%;
+        .card-menu{
+          h3{
+            text-overflow:clip ;
+            overflow:visible;
+      
+          }
+          p{
+            text-overflow:clip ;
+            overflow:visible;
+         
+          }
+        }
+       
+      }
+      
+      .card-menu:hover .animation-check {
+       width: 10%;
+      }
+    }
+
+  }  
  }
 
  
@@ -647,3 +708,94 @@ $Lite-green:#99E2D0;
     animation-timing-function: ease-in;
     }
     }
+
+
+    .loader{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #c779d0;
+      animation: Loader 2.4s both ;
+      position:fixed;
+      z-index: 10000;
+      opacity: 1;
+      
+      
+    }
+    .circle {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 3px solid #f1f1f1;
+      -webkit-animation: 1s linear infinite alternate boxMagic, 4s linear infinite tourne;
+              animation: 1s linear infinite alternate boxMagic, 4s linear infinite tourne;
+      padding-top: 270px;
+      position: relative;
+    }
+    .logo-loader-utensils{
+      width: 50px;
+      position: absolute;
+      top: 30%; left: 50%; /* à 50%/50% du parent référent */
+      transform: translate(-50%, -50%);
+      
+      
+    }
+    .logo-loader-ohmyfood{
+      width: 110px;
+      position: absolute;
+      top: 75%; left: 50%; /* à 50%/50% du parent référent */
+      transform: translate(-50%, -50%);
+
+    }
+    .dots-container{
+      width: 90px;
+      position: absolute;
+      top: 60%; left: 50%; /* à 50%/50% du parent référent */
+      transform: translate(-50%, -50%);
+      
+      @include flex-center;
+    }
+    .dot1,.dot2,.dot3{
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #000000;
+      margin: 8px;
+      animation: dotJump infinite 0.4s alternate;
+    }
+    .delay1{
+      animation-delay: 0.1s;
+    }
+    .delay2{
+      animation-delay: 0.2s;
+    }
+    
+  @keyframes dotJump {
+    100%{
+      transform: translateY(-15px);
+ 
+    }
+    
+  }
+    
+    @keyframes boxMagic {
+      from {
+        box-shadow: 0 0 0 #feac5e, 0 0 0 #9356DC, 0 0 0 #4bc0c8, 0 0 0 #42bd75;
+      }
+      to {
+        box-shadow: 0 -10px 0 #feac5e, -10px 0 0 #9356DC, 0 10px 0 #4bc0c8, 10px 0 0 #42bd75;
+      }
+    }
+   @keyframes Loader {
+    0%{
+    opacity: 1;
+   
+    }
+    100%{
+     
+    z-index: -1;
+      
+    }
+   }

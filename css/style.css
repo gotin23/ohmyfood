@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, ::after, ::before {
   padding: 0;
   margin: 0;
@@ -21,6 +22,7 @@ header nav {
   justify-content: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   position: relative;
+  background-color: #f1f1f1;
 }
 header nav img {
   width: 192px;
@@ -82,6 +84,7 @@ header section button {
 }
 header section button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 main .operation {
@@ -89,7 +92,7 @@ main .operation {
   background: #ffffff;
 }
 main .operation h2 {
-  margin-top: 48px;
+  padding-top: 48px;
   margin-bottom: 26px;
   padding-left: 20px;
 }
@@ -264,6 +267,9 @@ footer ul li img {
   width: 13px;
   margin-right: 9px;
 }
+footer ul .footer-li-smaller {
+  font-weight: 400;
+}
 footer ul :nth-child(2) img {
   width: 14px;
 }
@@ -319,13 +325,16 @@ main .menu-container {
   border-radius: 40px 40px 0px 0px;
   padding: 0px 13px;
 }
+main .menu-container .container-title-restaurant {
+  position: relative;
+}
 main .menu-container .menu:hover .green-bar {
   width: 85px;
 }
 main .menu-container .container-heart {
   position: absolute;
   top: 10px;
-  right: 40px;
+  right: 30px;
 }
 main .menu-container .container-heart img {
   width: 23px;
@@ -465,9 +474,10 @@ main .menu-container .container-btn-order button {
 }
 main .menu-container .container-btn-order button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1280px) {
   main .operation {
     display: flex;
     align-items: center;
@@ -475,14 +485,15 @@ main .menu-container .container-btn-order button:hover {
     flex-wrap: wrap;
   }
   main .operation h2 {
-    width: 75%;
+    width: 60%;
   }
   main .operation .container-button-operation {
     flex-direction: row;
-    width: 70%;
+    width: 60%;
   }
   main .operation .container-button-operation button {
-    width: 33%;
+    max-width: 322px;
+    max-height: 72px;
     margin-right: 36px;
     padding: 25px;
     margin-bottom: 80px;
@@ -494,16 +505,70 @@ main .menu-container .container-btn-order button:hover {
     flex-wrap: wrap;
   }
   main .restaurants-section h2 {
-    width: 75%;
+    width: 60%;
   }
   main .restaurants-section .restaurants-container {
     flex-direction: row;
-    width: 90%;
+    width: 60%;
   }
   main .restaurants-section .restaurants-container .restaurant-card {
     flex: 30%;
     margin-right: 15px;
     margin-bottom: 50px;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  footer .ohmyfood-logo-footer {
+    width: 131px;
+    margin-left: 31px;
+    margin-bottom: 3px;
+  }
+  footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer ul li {
+    margin-right: 40px;
+  }
+  main .all-menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  main .container-backgroung-top {
+    width: 70%;
+  }
+  main .menu-container {
+    width: 70%;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main .menu-container .container-title-restaurant .container-heart {
+    right: -40px;
+  }
+  main .menu-container .menu {
+    width: 70%;
+  }
+  main .menu-container .menu .card-menu h3 {
+    text-overflow: clip;
+    overflow: visible;
+  }
+  main .menu-container .menu .card-menu p {
+    text-overflow: clip;
+    overflow: visible;
+  }
+  main .menu-container .card-menu:hover .animation-check {
+    width: 10%;
   }
 }
 @keyframes rotationOut {
@@ -542,5 +607,93 @@ main .menu-container .container-btn-order button:hover {
   100% {
     transform: perspective(400px);
     animation-timing-function: ease-in;
+  }
+}
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c779d0;
+  animation: Loader 2.4s both;
+  position: fixed;
+  z-index: 10000;
+  opacity: 1;
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid #f1f1f1;
+  animation: 1s linear infinite alternate boxMagic, 4s linear infinite tourne;
+  padding-top: 270px;
+  position: relative;
+}
+
+.logo-loader-utensils {
+  width: 50px;
+  position: absolute;
+  top: 30%;
+  left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%);
+}
+
+.logo-loader-ohmyfood {
+  width: 110px;
+  position: absolute;
+  top: 75%;
+  left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%);
+}
+
+.dots-container {
+  width: 90px;
+  position: absolute;
+  top: 60%;
+  left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot1, .dot2, .dot3 {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000000;
+  margin: 8px;
+  animation: dotJump infinite 0.4s alternate;
+}
+
+.delay1 {
+  animation-delay: 0.1s;
+}
+
+.delay2 {
+  animation-delay: 0.2s;
+}
+
+@keyframes dotJump {
+  100% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes boxMagic {
+  from {
+    box-shadow: 0 0 0 #feac5e, 0 0 0 #9356DC, 0 0 0 #4bc0c8, 0 0 0 #42bd75;
+  }
+  to {
+    box-shadow: 0 -10px 0 #feac5e, -10px 0 0 #9356DC, 0 10px 0 #4bc0c8, 10px 0 0 #42bd75;
+  }
+}
+@keyframes Loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    z-index: -1;
   }
 }/*# sourceMappingURL=style.css.map */

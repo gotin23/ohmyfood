@@ -10,7 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
     <title>Ohmyfood</title>
 </head>
-<body>
+<body >
+    <div class="loader" >
+        <div class="circle">
+            <img class="logo-loader-utensils" src="./assets/svg/utensils-solid-color.svg" alt="">
+            <img class="logo-loader-ohmyfood" src="./assets/images/logo/ohmyfood.png" alt="" srcset="">
+            <div class="dots-container">
+                <div class="dot1"></div>
+                <div class="dot2  delay1"></div>
+                <div class="dot3 delay2"></div>
+            </div>
+        </div>
+    </div>
     <div class="all-content">
         <header>
             <nav>
@@ -36,7 +47,7 @@
                     <button><div>1</div><img src="./assets/svg/mobile-screen-button-solid.svg" alt="" srcset=""class="grey-logo-operation mobile"><img src="./assets/svg/mobile-screen-button-solid-color.svg" alt="" class="color-logo-operation mobile"> Choisissez un restaurant</button>
                     <button><div>2</div><img src="./assets/svg/list-ul-solid.svg" alt="" srcset=""class="grey-logo-operation list-ul"><img src="./assets/svg/list-ul-solid-color.svg" alt="" class="color-logo-operation list-ul"> Composez votre menu</button>
                     <button class="last-btn-operation"><div>3</div><img src="./assets/svg/store-solid.svg" alt="" class="grey-logo-operation store"><img src="./assets/svg/store-solid-color.svg" alt="" class="color-logo-operation store"> Dégustez au restaurant</button>
-                </div>    
+                </div>  
             </section>
             <section class="restaurants-section">
                 <h2>Restaurants</h2>
@@ -96,14 +107,15 @@
             </section>
         </main>
         <footer>
-            <img class="ohmyfood-logo-footer" src="./images/logo/ohmyfood@2x.svg" alt="" srcset="">
+            <img class="ohmyfood-logo-footer" src="./assets/images/logo/ohmyfood@2x.svg" alt="" srcset="">
             <ul>
                 <li><img src="./assets/svg/utensils-solid.svg" alt="" > <a href="#">Proposer un restaurant</a></li>
                 <li><img src="./assets/svg/handshake-angle-solid.svg" alt="" > <a href="#">Devenir partenaire</a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">Contact</a></li>
+                <li ><a href="#" class="footer-li-smaller">Mentions légales</a></li>
+                <li><a href="#" class="footer-li-smaller">Contact</a></li>
             </ul>
         </footer>
+        
     </div>
     
 </body>
