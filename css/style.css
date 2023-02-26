@@ -478,6 +478,15 @@ main .menu-container .container-btn-order button:hover {
 }
 
 @media screen and (min-width: 1280px) {
+  header section .title-container h1 {
+    font-size: 40px;
+  }
+  header .banner img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 413px;
+  }
   main .operation {
     display: flex;
     align-items: center;
