@@ -1,5 +1,7 @@
 @charset "UTF-8";
-*, ::after, ::before {
+*,
+::after,
+::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -645,7 +647,7 @@ main .menu-container .container-btn-order button:hover {
   width: 50px;
   position: absolute;
   top: 30%;
-  left: 50%; /* à 50%/50% du parent référent */
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -653,7 +655,7 @@ main .menu-container .container-btn-order button:hover {
   width: 110px;
   position: absolute;
   top: 75%;
-  left: 50%; /* à 50%/50% du parent référent */
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -661,14 +663,17 @@ main .menu-container .container-btn-order button:hover {
   width: 90px;
   position: absolute;
   top: 60%;
-  left: 50%; /* à 50%/50% du parent référent */
+  left: 50%;
+  /* à 50%/50% du parent référent */
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.dot1, .dot2, .dot3 {
+.dot1,
+.dot2,
+.dot3 {
   width: 15px;
   height: 15px;
   border-radius: 50%;
