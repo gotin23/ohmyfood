@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 ::after,
 ::before {
@@ -24,7 +23,7 @@ header nav {
   justify-content: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   position: relative;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
 }
 header nav img {
   width: 192px;
@@ -293,6 +292,7 @@ header .arrow-nav {
 }
 header .banner {
   width: 100%;
+  background-color: #ffffff;
 }
 header .banner img {
   width: 100%;
@@ -369,6 +369,7 @@ main .menu-container .card-menu {
   width: 100%;
   height: 69px;
   background: #FFFFFF;
+  cursor: pointer;
   border-radius: 15px;
   margin-top: 12px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -523,8 +524,8 @@ main .menu-container .container-btn-order button:hover {
     width: 60%;
   }
   main .restaurants-section .restaurants-container .restaurant-card {
-    flex: 30%;
-    margin-right: 15px;
+    width: 100%;
+    margin-right: 8px;
     margin-bottom: 50px;
   }
   footer {
@@ -598,6 +599,24 @@ main .menu-container .container-btn-order button:hover {
     transform: rotate(359deg);
   }
 }
+.fadeIn {
+  display: none;
+  animation: fadeIn 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.container-heart:hover .fadeIn {
+  display: block;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes flip {
   0% {
     transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
@@ -620,13 +639,50 @@ main .menu-container .container-btn-order button:hover {
     animation-timing-function: ease-in;
   }
 }
+.flipInX {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  animation-name: flipInX;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 2.2s;
+}
+
+.flipInX2 {
+  animation-delay: 2.5s;
+}
+
+.flipInX3 {
+  animation-delay: 2.7s;
+}
+@keyframes flipInX {
+  0% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transition-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  100% {
+    transform: perspective(400px);
+  }
+}
 .loader {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #c779d0;
+  background-color: #f1f1f1;
   animation: Loader 2.4s both;
   position: fixed;
   z-index: 10000;
@@ -664,7 +720,6 @@ main .menu-container .container-btn-order button:hover {
   position: absolute;
   top: 60%;
   left: 50%;
-  /* à 50%/50% du parent référent */
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -705,9 +760,13 @@ main .menu-container .container-btn-order button:hover {
 }
 @keyframes Loader {
   0% {
+    z-index: 10000;
+  }
+  99% {
     opacity: 1;
   }
   100% {
+    opacity: 0;
     z-index: -1;
   }
 }/*# sourceMappingURL=style.css.map */
