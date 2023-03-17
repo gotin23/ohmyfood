@@ -262,6 +262,8 @@ main {
 
       a {
         text-decoration: none;
+        display: block;
+        height: 100%;
         color: #000000;
       }
 
@@ -627,7 +629,7 @@ main {
 
 
       h2 {
-        width: 60%;
+        width: 70%;
       }
 
       @include flex-center;
@@ -635,10 +637,11 @@ main {
 
       .container-step-operation {
         flex-direction: row;
-        width: 60%;
+        justify-content: space-between;
+        width: 70%;
 
         .operation-step {
-          max-width: 322px;
+          max-width: 380px;
           max-height: 72px;
           margin-right: 36px;
           padding: 25px;
@@ -649,7 +652,7 @@ main {
 
     .restaurants-section {
       h2 {
-        width: 60%;
+        width: 70%;
 
       }
 
@@ -658,7 +661,7 @@ main {
 
       .restaurants-container {
         flex-direction: row;
-        width: 60%;
+        width: 70%;
 
         .restaurant-card {
           width: 100%;
@@ -674,7 +677,7 @@ main {
     flex-direction: row-reverse;
 
     .ohmyfood-logo-footer {
-      width: 131px;
+      width: 145px;
       margin-left: 31px;
       margin-bottom: 3px;
     }
