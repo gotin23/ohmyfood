@@ -648,11 +648,11 @@ main .menu-container .container-btn-order button:hover {
 }
 
 .flipInX2 {
-  animation-delay: 2.5s;
+  animation-delay: 2.6s;
 }
 
 .flipInX3 {
-  animation-delay: 2.7s;
+  animation-delay: 3s;
 }
 @keyframes flipInX {
   0% {
