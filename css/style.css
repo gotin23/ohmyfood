@@ -217,7 +217,7 @@ main .restaurants-section .restaurant-card p {
   font-size: 17px;
   line-height: 20px;
   margin-left: 13px;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 main .restaurants-section .restaurant-card .restaurant-pic {
   width: 100%;
@@ -647,15 +647,14 @@ main .menu-container .container-btn-order button:hover {
   animation-name: flipInX;
   animation-duration: 1s;
   animation-fill-mode: both;
-  animation-delay: 2.2s;
 }
 
 .flipInX2 {
-  animation-delay: 2.6s;
+  animation-delay: 0.4s;
 }
 
 .flipInX3 {
-  animation-delay: 3s;
+  animation-delay: 0.8s;
 }
 @keyframes flipInX {
   0% {

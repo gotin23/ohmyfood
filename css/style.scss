@@ -281,7 +281,7 @@ main {
         font-size: 17px;
         line-height: 20px;
         margin-left: 13px;
-        margin-bottom: 25px;
+        padding-bottom: 25px;
       }
 
       .restaurant-pic {
@@ -836,15 +836,15 @@ main {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  animation-delay: 2.2s;
+ 
 }
 
 .flipInX2 {
-  animation-delay: 2.6s;
+  animation-delay: 0.4s;
 }
 
 .flipInX3 {
-  animation-delay: 3s;
+  animation-delay: 0.8s;
 }
 
 @-webkit-keyframes flipInX {
