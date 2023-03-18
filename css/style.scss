@@ -297,7 +297,7 @@ main {
         bottom: 35px;
         width: 26px;
         height: 26px;
-        z-index: 100;
+        // z-index: 100;
 
       }
 
@@ -436,6 +436,7 @@ main {
       right: 30px;
 
       img {
+        cursor: pointer;
         width: 23px;
       }
 
@@ -747,7 +748,7 @@ main {
 }
 
 
-
+// animation rotation
 @keyframes rotationOut {
   from {
     transform: rotate(0deg);
@@ -768,6 +769,7 @@ main {
   }
 }
 
+// animation coeur fadeIn
 .fadeIn {
   display: none;
   animation: fadeIn 0.8s ease-in-out;
@@ -789,7 +791,7 @@ main {
 
 }
 
-
+// animation flips
 @keyframes flip {
   0% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
@@ -836,7 +838,7 @@ main {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
- 
+
 }
 
 .flipInX2 {
@@ -913,6 +915,7 @@ main {
   }
 }
 
+// Loader
 
 .loader {
   width: 100vw;
@@ -985,10 +988,10 @@ main {
 
 @keyframes Loader {
   0% {
-    z-index: 10000;
+    z-index: 100;
   }
 
-  99% {
+  98% {
     opacity: 1;
   }
 

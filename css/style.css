@@ -232,7 +232,6 @@ main .restaurants-section .restaurant-card .container-heart {
   bottom: 35px;
   width: 26px;
   height: 26px;
-  z-index: 100;
 }
 main .restaurants-section .restaurant-card .logo-heart-strokes {
   width: 26px;
@@ -340,6 +339,7 @@ main .menu-container .container-heart {
   right: 30px;
 }
 main .menu-container .container-heart img {
+  cursor: pointer;
   width: 23px;
 }
 main .menu-container .container-heart .logo-heart-fill {
@@ -748,9 +748,9 @@ main .menu-container .container-btn-order button:hover {
 
 @keyframes Loader {
   0% {
-    z-index: 10000;
+    z-index: 100;
   }
-  99% {
+  98% {
     opacity: 1;
   }
   100% {
